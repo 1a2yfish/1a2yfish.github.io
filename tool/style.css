@@ -132,14 +132,13 @@ body {
 
 @media (max-width: 767px) {
     .mobleh2{
-        display: inline;
+        display: block;
         text-align: center;
         margin-top: 20px;
     }
-    .mobleh2 .a {
-        display: inline;
-        text-align: center;
-        margin-top: 20px;
+    .mobleh2 a{
+        text-decoration: none;
+        color: #000;
     }
 }
 
