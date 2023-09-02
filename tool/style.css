@@ -1,0 +1,187 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url("images/hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(17px);
+    --webkit-backdrop-filter: blur(17px);
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 767px) {
+    .sidebar{
+        display: none;
+    }
+}
+
+.sidebar:hover {
+    width: 260px;
+}
+
+.sidebar .logo {
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 15px;
+}
+
+.logo img {
+    width: 43px;
+    border-radius: 50%;
+}
+
+.logo h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-left: 15px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+}
+
+.sidebar .links {
+    list-style: none;
+    margin-top: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: calc(100% - 140px);
+}
+
+.sidebar .links::-webkit-scrollbar {
+    display: none;
+}
+
+.links li {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.links li:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+.links h4 {
+    color: #222;
+    font-weight: 500;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.sidebar:hover .links h4 {
+    display: block;
+}
+
+.links hr {
+    margin: 10px 8px;
+    border: 1px solid #4c4c4c;
+}
+
+.sidebar:hover .links hr {
+    border-color: transparent;
+}
+
+.links li span {
+    padding: 12px 10px;
+}
+
+.links li a {
+    padding: 10px;
+    color: #000;
+    display: none;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar:hover .links li a {
+    display: block;
+}
+
+.mobleh2{
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .mobleh2{
+        display: inline;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .mobleh2 .a {
+        display: inline;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.links .logout-link {
+    margin-top: 20px;
+}
+
+.box {
+    max-width: 720px;
+    height: 420px;
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:flex;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 3.3rem;
+    box-shadow: 0 0 20px #b7b2a9;
+}
+
+#input{
+    margin: 30px auto;
+    position: relative;
+    text-align: center;
+    background-color: darkturquoise;
+}
+
+#output{
+    position: relative;
+    margin: 30px auto;
+    text-align: center;
+    background-color: darkturquoise;
+}
+
+.main{
+    margin: auto;
+    max-width: 800px;
+    margin-top: 30px;
+    padding: 30px;
+    background-image: url(./images/main-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1.1rem;
+}
+
