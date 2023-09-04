@@ -159,20 +159,6 @@ body {
     box-shadow: 0 0 20px #b7b2a9;
 }
 
-#input{
-    margin: 30px auto;
-    position: relative;
-    text-align: center;
-    background-color: darkturquoise;
-}
-
-#output{
-    position: relative;
-    margin: 30px auto;
-    text-align: center;
-    background-color: darkturquoise;
-}
-
 .main{
     margin: auto;
     max-width: 800px;
@@ -184,3 +170,62 @@ body {
     border-radius: 1.1rem;
 }
 
+.tool{
+    color: #000;
+    max-width: 300px;
+    min-height: 120px;
+    background-color: skyblue;
+    border-radius: 1.1rem;
+}
+
+.tool:hover{
+    border-color: transparent;
+    background-image: url(./images/hero-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 1.1rem;
+    max-width: 300px;
+    min-height: 120px;
+}
+
+.tool h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .close-btn {
+    cursor: pointer;
+    float: right;
+    size: 30px;
+  }
+
+.code_block {
+    color: white;
+    max-width: 400px;
+    background-color: #000;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 10px;
+    padding-left: 15px;
+}

